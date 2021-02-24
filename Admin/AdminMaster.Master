@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="RPSWebsiteCSharp.Admin.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />
+
+    <%--<link href="../assets/css/bootstrap.css" rel="stylesheet" />--%>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+
+     <link href="nepali.datepicker.v3.2.min.css" rel="stylesheet" />
+
+    <link href="../assets/css/sweetalert.css" rel="stylesheet" />
+    <script src="../assets/js/sweetalert.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Admin Task</a>
+                </div>
+                <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">
+                    <asp:Label ID="lblAdminname" runat="server" Text=""></asp:Label>
+                    <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger" Text="LOGOUT" OnClick="btnLogout_Click" />
+                </div>
+                <%--<div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;">Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>--%>
+            </nav>
+            <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+                        <%--  <li class="text-center">
+                            <img src="assets/img/find_user.png" class="user-image img-responsive" />
+                        </li>--%>
+
+                        <li><a class="active-menu" href="AdminHome.aspx"><i class="fa"></i>Dashboard</a></li>
+                        <li><a href="SchoolProfile.aspx"><i class="fa"></i>School Profile</a></li>
+                        
+                        <li>
+                            <a href="#"><i class="fa"></i>SETTINGS<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="Session.aspx">School Session</a></li>
+                                <li><a href="AddClass.aspx">Add Class</a></li>
+                                <li>
+                                    <a href="#">Category<span class="fa arrow"></span></a>
+                                    <%--  <ul class="nav nav-third-level">
+                                        <li><a href="AddCategory.aspx">Add Category</a></li>
+                                        <li><a href="AddSubCategory.aspx">Add Sub-Category</a></li>
+                                        <li><a href="#">Third Level Link</a></li>
+                                    </ul>--%>
+                                </li>
+                                 <li><a href="BusRoute.aspx">Create Bus Route</a></li>
+                                <li><a href="ClasswiseFeePlan.aspx">Create Fee Plan</a></li>
+                               
+                            </ul>
+                        </li>
+
+                            <li>
+                            <a href="#"><i class="fa"></i>STUDENT<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="StudentRegistration.aspx">Add Student</a></li>
+                                <li>
+                                    <a href="studentRecord.aspx">Student List</a>
+                                    <%--  <ul class="nav nav-third-level">
+                                        <li><a href="AddCategory.aspx">Add Category</a></li>
+                                        <li><a href="AddSubCategory.aspx">Add Sub-Category</a></li>
+                                        <li><a href="#">Third Level Link</a></li>
+                                    </ul>--%>
+                                </li>                               
+                                <li><a href="Discount.aspx">Discount Entry</a></li>
+                                <li><a href="#">Add Images</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa"></i>FEE PAYMENT<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                  <li><a href="feepayment.aspx">Fee Payment</a></li>
+                                 <li><a href="FeepaymentRecord.aspx">Fee Payment List</a></li>
+                            </ul>
+                        </li>
+
+                          <li>
+                            <a href="#"><i class="fa"></i>STAFF<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                  <li><a href="AddStaff.aspx">Add Staff</a></li>
+                                 <li><a href="StaffAdvance.aspx">Advance Entry</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i class="fa"></i>Publish Result</a></li>
+                        <li><a href="#"><i class="fa"></i>Notice Board</a></li>
+                       
+                           <li>
+                            <a href="#"><i class="fa"></i>MESSAGES<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                  <li><a href="DisplayFeedback.aspx">Display Feedback</a></li>
+                                 <li><a href="StudentComment.aspx">Display Complaint</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#"><i class="fa"></i>All Media<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="AddImages.aspx">Add Images</a></li>
+                                <li><a href="#">Add Videos</a></li>
+                                <li><a href="#">Add Songs</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa"></i>Blank Page</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- /. NAV SIDE  -->
+
+
+
+
+            <!-- page-content start -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <%--every child page must include here--%>
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/jquery.metisMenu.js"></script>
+        <script src="../assets/js/custom.js"></script>
+        <script src="../assets/js/validation.js"></script>
+
+         <script src="nepali.datepicker.v3.2.min.js"></script>
+        <script src="../assets/js/validation.js"></script>
+    </form>
+</body>
+</html>

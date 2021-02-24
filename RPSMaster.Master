@@ -1,0 +1,497 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RPSMaster.master.cs" Inherits="RPSWebsiteCSharp.RPSMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%-- <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Template CSS -->
+    <link href="assets/css/animate.css" rel="stylesheet" />
+
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/nexus.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+    <link href="Admin/nepali.datepicker.v3.2.min.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans:300,400" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source Sans Pro:300,400" />
+
+ 
+
+    <style>
+        /* Horizontal menu bar css */
+        #menu {
+            margin-left: 0px;
+        }
+
+            #menu ul {
+                list-style: none;
+                z-index: 999;
+            }
+
+                #menu ul li {
+                    background-color: #373737;
+                    margin: 2px;
+                    width: 80px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    float: left;
+                    position: relative;
+                    border-radius: 5px;
+                }
+
+                    #menu ul li a {
+                        text-decoration: none;
+                        color: white;
+                        display: block;
+                    }
+
+                        #menu ul li a:hover {
+                            background-color: blue;
+                            border-radius: 5px;
+                        }
+
+                #menu ul ul {
+                    position: absolute;
+                    display: none;
+                }
+
+                #menu ul li:hover > ul {
+                    display: block;
+                }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="body_bg"> 
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color:palegreen">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel1">Rautahat Public School</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Scholarship</h2>
+                    <div class="body" style="font-size:14px; color:#000; text-align: justify">
+                        1. A full scholarship on tuition fees is awarded every year to students who
+                 are financially needy but they are intelligent and hardworking.<br />
+                        2. A partial scholarship on tuition fees is awarded to students who 
+                excel in games, sports and other activities conducted within the 
+                school or in Inter-School, District or National level competitions. 
+                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button" data-dismiss="modal">Close</button>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    <!-- Modal -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color:palegreen">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel2">Rautahat Public School</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Academic Information</h2>
+                    <div class="body" style="font-size:14px; color:#000; text-align: justify">
+                        The academic session begins in mid-April (the first week of Baisakh), 
+            and is completed by the second week of March of the following year 
+            (the third week of Chaitra). The academic session is divided into 
+            four terms, and each term ends with the conduct of the terminal 
+            examination. The final result is prepared 
+            on the basis of average marks obtained throughout the four terms. Students, 
+            who fail for two consecutive years in the same class, will be issued a TC.
+
+            Information about examination schedules, important activities/events and holidays 
+            are clearly mentioned in the school calendar. Parents/Guardians are required to
+             follow the schedule strictly. They will also be notified in writing 
+            if any changes are made in the schedule due to any circumstances.
+                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="button" data-dismiss="modal">Close</button>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="container_header" class="container">
+                <div id="header" class="row">
+
+                    <div class="col-md-12 margin-top-15">
+
+                        <!-- Header Social Icons -->
+                        <ul class="social-icons circle pull-right">
+                            <li class="social-twitter">
+                                <a href="#" target="_blank" title="Twitter"></a>
+                            </li>
+                            <li class="social-facebook">
+                                <a href="#" target="_blank" title="Facebook"></a>
+                            </li>
+                            <li class="social-googleplus">
+                                <a href="#" target="_blank" title="GooglePlus"></a>
+                            </li>
+
+                        </ul>
+                        <!-- End Header Social Icons -->
+                        <div id="menu">
+                            <ul>
+
+
+                                <li><a href="Login.aspx">LOGIN</a></li>
+                                <!-- Button HTML (to Trigger Modal) -->
+                                <!-- <a href="#myModal" class="trigger-btn" data-toggle="modal">LOGIN</a> -->
+
+
+                                <li><a href="#">REGISTER</a>
+                                    <ul>
+                                        <li><a href="signup.aspx">Students</a></li>
+                                        <li><a href="SignupStaff.aspx">Staffs</a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="primary-container-group">
+                <!-- Background -->
+                <div class="primary-container-background">
+                    <div class="primary-container"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--End Background -->
+                <div class="primary-container">
+                    <div id="container_hornav" class="container no-padding">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="#">
+                                <img src="assets/img/schoollogo.png" alt="Logo" />
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                        <!-- Slogan -->
+                        <p class="site-slogan">Education is the key of Success</p>
+                        <!-- End Slogan -->
+                        <!-- Top Menu -->
+                        <div class="row">
+                            <div class="hornav-block">
+                                <div id="hornav" class="pull-right">
+                                    <ul id="hornavmenu" class="nav navbar-nav">
+                                        <li>
+                                            <a href="RPSHomepage.aspx">Home</a>
+                                        </li>
+                                        <li>
+                                            <span style="cursor: pointer">Features</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="About-us.aspx">About RPS</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal2">Academic</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" data-toggle="modal" data-target="#myModal1">Schoolarship</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Staffs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="OnlineAdmissionForm.aspx" style="font-weight:bold; background:#ffb4b4; color: #fff">Online Admission</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Fees</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span style="cursor: pointer">Gallery</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="ImageGallery.aspx" target="_blank">Photo Gallery</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Video Gallery</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">F.A.Q.</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="Feedback.aspx">Feedback</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Result</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="Contact.aspx">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- End Top Menu -->
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="container no-padding gridgallery">
+                <hr />
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12 padding-vert-30">
+                                <h2 class="subtitle text-center">The Board members of RPS</h2>
+                                <h3 class="subtitle text-center"></h3>
+                            </div>
+                        </div>
+                        <div class="portfolio-item col-md-3 animate fadeInUp">
+                            <div class="image-hover">
+                                <a href="#">
+                                    <figure>
+                                        <img src="assets/img/portfolio/rajesh.jpg" alt="image1" />
+                                        <figcaption>
+                                            <h3>Rajesh Kr. Yadav</h3>
+                                            <span>Maths Teacher, Dharahari School Rautahat</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item col-md-3 animate fadeInUp">
+                            <div class="image-hover">
+                                <a href="#">
+                                    <figure>
+                                        <img src="assets/img/portfolio/sanjay.jpg" alt="image1" />
+                                        <figcaption>
+                                            <h3>Sanjay Pd. Gupta</h3>
+                                            <span>Head Teacher, Madhavpur High School</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item col-md-3 animate fadeInUp">
+                            <div class="image-hover">
+                                <a href="#">
+                                    <figure>
+                                        <img src="assets/img/portfolio/arjun.jpg" alt="image1" />
+                                        <figcaption>
+                                            <h3>Arjun Kr. Yadav</h3>
+                                            <span>Dharahari School</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-item col-md-3 animate fadeInUp">
+                            <div class="image-hover">
+                                <a href="#">
+                                    <figure>
+                                        <img src="assets/img/portfolio/birbahadur.jpg" alt="image1" />
+                                        <figcaption>
+                                            <h3>Bir Bd. Thakur</h3>
+                                            <span>Maths Teacher, Dharahari School, Rautahat</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12-md">
+                                <p class="text-center padding-bottom-30" style="max-width: 690px; margin: 0 auto;">
+                                    Mirum est notare quam littera gothica, quam nunc putamus. Cras non sem sem, at eleifend mi. Vivamus sit amet ante est, sit amet rutrum augue. Cras non sem sem, at eleifend mi. Nam liber tempor cum soluta nobis eleifend
+                                    option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="base" class="container padding-vert-30">
+                <div class="row">
+                    <!-- Disclaimer -->
+                    <div class="col-md-5">
+                        <h3 class="margin-bottom-10">Disclaimer</h3>
+                        <p style="font-size: 14px; color: white">
+                            All stock images on this template demo are for 
+                            presentation purposes only, intended to represent 
+                            a live site and are not included with this template.
+
+                        </p>
+                        <p style="font-size: 14px; color: white">
+                            Most of the images used here are available from                                   
+                         <a class="nobold" href="http://www.shutterstock.com/" target="_blank">shutterstock.com</a>. 
+                            Links are provided if you wish to purchase them from their copyright owners.
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- End Disclaimer -->
+                    <!-- Contact Details -->
+                    <div class="col-md-4">
+                        <h3 class="margin-bottom-10">Contact Details</h3>
+                        <p style="font-size: 14px; color: white">
+                            Rautahat Public School
+                                   
+                                    <br />
+                            Dewahi Gonahi Municipality-8
+                                   
+                                    <br />
+                            Prempur Gonahi, Rautahat
+                               
+                        </p>
+                        <p style="font-size: 14px; color: white">
+                            Email:
+                                   
+                                    <a href="#">ruchalanand@gmail.com</a>
+                            <br />
+                            Mobile:
+                                   
+                                    <a href="#">98********</a>
+                        </p>
+                    </div>
+                    <!-- End Contact Details -->
+                    <!-- Sample Menu -->
+                    <div class="col-md-3">
+                        <h3 class="margin-bottom-10">Sample Menu</h3>
+                        <ul class="menu">
+                            <li>
+                                <a class="fa-tasks" href="#">Placerat facer possim</a>
+                            </li>
+                            <li>
+                                <a class="fa-users" href="#">Quam nunc putamus</a>
+                            </li>
+                            <li>
+                                <a class="fa-signal" href="#">Velit esse molestie</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- End Sample Menu -->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+
+            <div class="container padding-vert-30">
+                <div class="row">
+                    <div id="copyright">
+                        <p>(c) 2020 Rautahat Public School<a class="fa-user" href="Login.aspx">Admin</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </form>
+
+
+
+    <!-- JS -->
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+
+
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <!-- Isotope - Portfolio Sorting -->
+    <script src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+    <!-- Mobile Menu - Slicknav -->
+    <script src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+    <!-- Animate on Scroll-->
+    <script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+    <!-- Modernizr -->
+    <script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+    <!-- End JS -->
+    <script src="Admin/nepali.datepicker.v3.2.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#loginModal').modal('show');
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        });
+
+
+
+        $('.modal-content').resizable({
+            //alsoResize: ".modal-dialog",
+            minHeight: 300,
+            minWidth: 300
+        });
+        $('.modal-dialog').draggable();
+
+        $('#myModal1').on('show.bs.modal', function () {
+            $(this).find('.modal-body').css({
+                'max-height': '100%'
+            });
+        });
+
+
+        $('#myModal2').on('show.bs.modal', function () {
+            $(this).find('.modal-body').css({
+                'max-height': '100%'
+            });
+        });
+
+    </script>
+
+
+
+
+</body>
+</html>

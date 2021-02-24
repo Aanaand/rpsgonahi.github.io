@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="studentMaster.master.cs" Inherits="RPSWebsiteCSharp.Students.studentMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1" />
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" />
+    <!-- Bootstrap Core CSS -->
+  
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Template CSS -->
+    <link href="../assets/css/animate.css" rel="stylesheet" />
+
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="../assets/css/nexus.css" rel="stylesheet" />
+    <link href="../assets/css/responsive.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans:300,400" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source Sans Pro:300,400" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="body_bg">
+            <div id="container_header" class="container">
+                <div id="header" class="row">
+                    <div class="col-md-12 margin-top-15">
+                        <div class="user pull-right">
+                            <asp:Label ID="lblusername" runat="server" Text="Label"></asp:Label>
+                            <asp:Button ID="btnLogout" CssClass="btn btn-danger" runat="server" Text="LOGOUT" OnClick="btnLogout_Click" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            <div class="primary-container-group">
+                <!-- Background -->
+                <div class="primary-container-background">
+                    <div class="primary-container"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <!--End Background -->
+                <div class="primary-container">
+                    <div id="container_hornav" class="container no-padding">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../assets/img/schoollogo.png" alt="Logo" />
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                        <!-- Slogan -->
+                        <p class="site-slogan">Education is the key of Success</p>
+                        <!-- End Slogan -->
+                        <!-- Top Menu -->
+                        <div class="row">
+                            <div class="hornav-block">
+                                <div id="hornav" class="pull-right">
+                                    <ul id="hornavmenu" class="nav navbar-nav">
+                                        <li>
+                                            <a href="StudentHome.aspx">Home</a>
+                                        </li>
+                                        <li>
+                                            <span style="cursor: pointer">Messages</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Principal's Message</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Director's Message</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">School Activities</a>
+                                                </li>                                              
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span style="cursor: pointer">Pages</span>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Admission</a>
+                                                </li>
+                                                <li>
+                                                    <a href="MyFeeStatement.aspx">My Fees Statement</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Download</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="#">Teachers Notes</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="#">Holidays</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                                                        
+                                        <li>
+                                            <a href="CommentBox.aspx">Complaint</a>
+                                        </li>
+                                           <li>
+                                            <a href="#">My Result</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- End Top Menu -->
+                    </div>
+
+                </div>
+            </div>
+
+
+              <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+
+
+
+            <div id="base" class="container padding-vert-30">
+                <div class="row">
+                    <!-- Disclaimer -->
+                    <div class="col-md-6">
+                        <h3 class="margin-bottom-10">Disclaimer</h3>
+                        <p>All stock images on this template demo are for presentation purposes only, intended to represent a live site and are not included with this template.</p>
+                        <p>
+                            Most of the images used here are available from
+                                   
+                                    <a class="nobold" href="http://www.shutterstock.com/" target="_blank">shutterstock.com</a>. Links are provided if you wish to purchase them from their copyright owners.
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- End Disclaimer -->
+                    <!-- Contact Details -->
+                    <div class="col-md-3">
+                        <h3 class="margin-bottom-10">Contact Details</h3>
+                        <p>
+                            Rautahat Public School
+                                   
+                                    <br />
+                            Dewahi Gonahi Municipality-8
+                                   
+                                    <br />
+                            Prempur Gonahi
+                                   
+                                    <br />
+                            Rautahat
+                               
+                        </p>
+                        <p>
+                            Email:
+                                   
+                                    <a href="#">ruchalanand@gmail.com</a>
+                            <br />
+                            Mobile:
+                                   
+                                    <a href="#">98********</a>
+                        </p>
+                    </div>
+                    <!-- End Contact Details -->
+                    <!-- Sample Menu -->
+                    <div class="col-md-3">
+                        <h3 class="margin-bottom-10">Sample Menu</h3>
+                        <ul class="menu">
+                            <li>
+                                <a class="fa-tasks" href="#">Placerat facer possim</a>
+                            </li>
+                            <li>
+                                <a class="fa-users" href="#">Quam nunc putamus</a>
+                            </li>
+                            <li>
+                                <a class="fa-signal" href="#">Velit esse molestie</a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- End Sample Menu -->
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+          
+             
+            <div class="container padding-vert-30">
+                <div class="row">
+                    <div id="copyright">
+                        <p>(c) 2020 Rautahat Public School, Dewahi Gonahi-8, Rautahat</p>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </form>
+    <!-- JS -->
+    <script src="../assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="../assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- Isotope - Portfolio Sorting -->
+    <script src="../assets/js/jquery.isotope.js" type="text/javascript"></script>
+    <!-- Mobile Menu - Slicknav -->
+    <script src="../assets/js/jquery.slicknav.js" type="text/javascript"></script>
+    <!-- Animate on Scroll-->
+    <script type="text/javascript" src="../assets/js/jquery.visible.js" charset="utf-8"></script>
+    <!-- Modernizr -->
+    <script src="../assets/js/modernizr.custom.js" type="text/javascript"></script>
+    <!-- End JS -->
+</body>
+</html>
